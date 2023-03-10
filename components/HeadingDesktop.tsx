@@ -1,9 +1,17 @@
 import React from "react";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export default function HeadingDesktop() {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm")); // above 600px
+
   return (
-    <div className="HeadingDesktop">
-      <h1>HeadingDesktop</h1>
-    </div>
-  )
+    <React.Fragment>
+      {isDesktop && 
+        <div className="HeadingDesktop">
+          <h1>Desktop</h1>
+        </div>
+      }
+    </React.Fragment>
+  );
 }

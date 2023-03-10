@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import App from "../../components/App";
+import HeadingDesktop from "../../components/HeadingDesktop";
 import mediaQuery from "css-mediaquery";
 
 function createMatchMedia(width) {
@@ -21,28 +21,16 @@ function resizeScreenSize(width) {
   window.matchMedia = createMatchMedia(width);
 }
 
-describe("App Component", () => {
+describe("HeadingDesktop Component", () => {
   it("renders correctly on mobiles screens", () => {
     // Set the screen size to a smaller value
-    resizeScreenSize(400);
+    resizeScreenSize(600);
 
     // Render the component
-    render(<App />);
+    render(<HeadingDesktop />);
 
     // Verify that the component styles are correct for the default screen size
-    const pElement = screen.getByText("Hello Mobile");
-    expect(pElement).toBeInTheDocument();
-  });
-
-  it("renders correctly on desktop screens", () => {
-    // Set the screen size to a smaller value
-    resizeScreenSize(900);
-
-    // Render the component
-    render(<App />);
-
-    // Verify that the component styles are correct for the default screen size
-    const pElement = screen.getByText("Hello Desktop");
+    const pElement = screen.getByText("Desktop");
     expect(pElement).toBeInTheDocument();
   });
 });
