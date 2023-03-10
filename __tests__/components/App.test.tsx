@@ -23,26 +23,35 @@ function resizeScreenSize(width) {
 
 describe("App Component", () => {
   it("renders correctly on mobiles screens", () => {
-    // Set the screen size to a smaller value
+    // Set the screen size to a mobile-sized value
     resizeScreenSize(400);
 
     // Render the component
-    render(<App />);
+    const {container} = render(<App />);
 
-    // Verify that the component styles are correct for the default screen size
-    const pElement = screen.getByText("Hello Mobile");
-    expect(pElement).toBeInTheDocument();
+    // Check to see if child component has the correct class
+    expect(container.firstChild).toHaveClass("HeadingMobile");
+  });
+
+  it("renders correctly on tablet screens", () => {
+    // Set the screen size to a tablet-sized value
+    resizeScreenSize(600);
+
+    // Render the component
+    const {container} = render(<App />);
+
+    // Check to see if child component has the correct class
+    expect(container.firstChild).toHaveClass("HeadingTablet");
   });
 
   it("renders correctly on desktop screens", () => {
-    // Set the screen size to a smaller value
+    // Set the screen size to a desktop-sized value
     resizeScreenSize(900);
 
     // Render the component
-    render(<App />);
+    const {container} = render(<App />);
 
-    // Verify that the component styles are correct for the default screen size
-    const pElement = screen.getByText("Hello Desktop");
-    expect(pElement).toBeInTheDocument();
+    // Check to see if child component has the correct class
+    expect(container.firstChild).toHaveClass("HeadingDesktop");
   });
 });
