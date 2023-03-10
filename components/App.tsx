@@ -1,5 +1,7 @@
 import React from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
+import HeadingMobile from "./HeadingMobile";
+import HeadingDesktop from "./HeadingDesktop";
 
 export default function App() {
   const theme = useTheme();
@@ -8,8 +10,8 @@ export default function App() {
 
   return (
     <React.Fragment>
-      {isMobile && <span>Hello Mobile</span>}
-      {isDesktop && <span>Hello Desktop</span>}
+      {isMobile && <HeadingMobile />}
+      {isDesktop && <HeadingDesktop />}
     </React.Fragment>
   );
 }
