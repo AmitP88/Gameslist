@@ -3,3 +3,22 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin ovalElementMobile {
+  border-radius: 25px;
+  font-size: x-small;
+}
+
+@mixin ovalElementTabletDesktop {
+  border-radius: 25px;
+  font-size: small;
+}
+
+@mixin marginTopBottom {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+@mixin sansSerifFontFamily {
+  font-family: sans-serif;
+}

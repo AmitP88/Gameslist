@@ -4,5 +4,6 @@
   @include flexCenter;
   .app-name {
     margin-left: 5%;
+    @include sansSerifFontFamily;
   }
 }

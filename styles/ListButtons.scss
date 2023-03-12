@@ -2,8 +2,18 @@
 
 .ListButtons {
   @include flexCenter;
-  button:first-child {
-    margin-right: 5%;
-  }  
+  @include marginTopBottom;
+  button {
+    @include ovalElementMobile;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  .createButton {
+    margin-right: 10%;
+  }
+  .deleteButton {
+    background-color: firebrick;
+  }
 }
 

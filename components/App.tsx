@@ -3,6 +3,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import HeadingMobile from "./HeadingMobile";
 import HeadingTablet from "./HeadingTablet";
 import HeadingDesktop from "./HeadingDesktop";
+import "../styles/media_queries.scss";
 
 export default function App() {
   const theme = useTheme();
