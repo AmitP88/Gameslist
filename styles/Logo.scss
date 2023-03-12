@@ -1,0 +1,8 @@
+@import "/styles/mixins";
+
+.logo {
+  @include flexCenter;
+  .app-name {
+    margin-left: 5%;
+  }
+}
