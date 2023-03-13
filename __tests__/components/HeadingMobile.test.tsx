@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import Logo from "../../components/Logo";
-import ListButtons from "../../components/ListButtons";
 
 describe("HeadingMobile component", () => {
   it("renders Logo", () => {
