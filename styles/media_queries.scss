@@ -1,7 +1,2 @@
 @import "/styles/mixins";
 
-@media screen and (min-width: 600px) {
-  .ListButtons > button {
-    @include ovalElementTabletDesktop;
-  }
-}

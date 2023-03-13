@@ -9,12 +9,4 @@ describe("HeadingMobile component", () => {
     const heading = screen.getByText("Gameslist");
     expect(heading).toBeInTheDocument();
   });
-
-  it("renders ListButtons", () => {
-    render(<ListButtons />);
-
-    const createList = screen.getByText("Create List");
-    expect(createList).toBeInTheDocument();
-  });
-
 });
